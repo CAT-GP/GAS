@@ -17,6 +17,8 @@
 #include "AbilitySystem/Attributes/GAS_AttributeSet.h"
 #include "AbilitySystem/Components/GAS_AbilitySystemComponentBase.h"
 
+#include "ActorComponents/GAS_FootstepComponent.h"
+
 #include "Net/UnrealNetwork.h"
 
 #include "ActorComponents/GAS_CharacterMovementComponent.h"
@@ -68,6 +70,8 @@ AGASCharacter::AGASCharacter(const FObjectInitializer& ObjectInitializer) : Supe
 	AbilitySystemComponent->SetReplicationMode(EGameplayEffectReplicationMode::Mixed);
 
 	AttributeSet = CreateDefaultSubobject<UGAS_AttributeSet>(TEXT("AttributeSet"));
+
+	FootstepsComponent = CreateDefaultSubobject<UFootstepComponent>(TEXT("FootstepComponent"));
 }
 
 void AGASCharacter::PostInitializeComponents()
