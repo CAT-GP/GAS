@@ -58,12 +58,13 @@ void UGAS_FootstepComponent::HandleFootstep(EFoot Foot)
 						if (PhysicalMaterial)
 						{
 							UGameplayStatics::PlaySoundAtLocation(this, PhysicalMaterial->FootstepSound, Location, 1.f);
+							
+							if (DebugShowFootsteps > 0)
+							{
+								DrawDebugString(GetWorld(), Location, PhysicalMaterial->GetName(), nullptr, FColor::White, 4.f);
+							}
 						}
 
-						if (DebugShowFootsteps > 0)
-						{
-							DrawDebugString(GetWorld(), Location, PhysicalMaterial->GetName(), nullptr, FColor::White, 4.f);
-						}
 					}
 
 					if (DebugShowFootsteps > 0)
