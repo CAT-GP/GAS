@@ -71,7 +71,7 @@ AGASCharacter::AGASCharacter(const FObjectInitializer& ObjectInitializer) : Supe
 
 	AttributeSet = CreateDefaultSubobject<UGAS_AttributeSet>(TEXT("AttributeSet"));
 
-	FootstepsComponent = CreateDefaultSubobject<UFootstepComponent>(TEXT("FootstepComponent"));
+	FootstepsComponent = CreateDefaultSubobject<UGAS_FootstepComponent>(TEXT("FootstepComponent"));
 }
 
 void AGASCharacter::PostInitializeComponents()
@@ -171,6 +171,11 @@ void AGASCharacter::SetCharacterData(const FCharacterData InCharacterData)
 	CharacterData = InCharacterData;
 
 	InitFromCharacterData(InCharacterData);
+}
+
+UGAS_FootstepComponent* AGASCharacter::GetFootstepsComponent() const
+{
+	return FootstepsComponent;
 }
 
 void AGASCharacter::OnRep_CharacterData()
