@@ -4,8 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "Animation/AnimNotifies/AnimNotify.h"
+#include "GAS_GameTypes.h"
 #include "AnimNotify_Step.generated.h"
-
 /**
  * 
  */
@@ -14,4 +14,11 @@ class GAS_API UAnimNotify_Step : public UAnimNotify
 {
 	GENERATED_BODY()
 	
+public:
+
+	virtual void Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation) override;
+
+	UPROPERTY(EditAnywhere)
+	EFoot Foot;
+
 };

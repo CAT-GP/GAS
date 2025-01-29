@@ -1,5 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
+#include "AnimationInstances/GAS_AnimInstance.h"
+
 #include "GASCharacter.h"
 #include "GAS_GameTypes.h"
 
@@ -9,7 +11,6 @@
 #include "DataAssets/CharacterDataAsset.h"
 #include "DataAssets/CharacterAnimationDataAsset.h"
 
-#include "AnimationInstances/GAS_AnimInstance.h"
 
 UBlendSpace* UGAS_AnimInstance::GetLocomotionBlendSpace() const
 {

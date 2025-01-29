@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "GAS_GameTypes.h"
 #include "GAS_FootstepComponent.generated.h"
 
 
