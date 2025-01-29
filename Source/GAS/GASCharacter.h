@@ -54,7 +54,8 @@ class AGASCharacter : public ACharacter, public IAbilitySystemInterface
 	UInputAction* LookAction;
 
 public:
-	AGASCharacter();
+
+	AGASCharacter(const FObjectInitializer& ObjectInitializer);
 
 	virtual void PostInitializeComponents() override;
 	
