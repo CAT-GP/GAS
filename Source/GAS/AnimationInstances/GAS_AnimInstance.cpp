@@ -23,7 +23,7 @@ UBlendSpace* UGAS_AnimInstance::GetLocomotionBlendSpace() const
 		}
 	}
 
-	return nullptr;
+	return DefaultCharacterAnimDataAsset ? DefaultCharacterAnimDataAsset->CharacterAnimationData.MovementBlendSpace : nullptr;
 }
 
 UAnimSequenceBase* UGAS_AnimInstance::GetIdleAnimation() const
@@ -38,5 +38,5 @@ UAnimSequenceBase* UGAS_AnimInstance::GetIdleAnimation() const
 		}
 	}
 
-	return nullptr;
+	return DefaultCharacterAnimDataAsset ? DefaultCharacterAnimDataAsset->CharacterAnimationData.IdleAnimationAsset : nullptr;
 }
